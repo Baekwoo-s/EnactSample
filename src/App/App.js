@@ -29,6 +29,7 @@ import Slider from '../views/Slider';
 import Spinner from '../views/Spinner';
 import TooltipDecorator from '../views/TooltipDecorator';
 import VideoPlayer from '../views/VideoPlayer';
+import VirtualGridList from '../views/VirtualGridList';
 import VirtualList from '../views/VirtualList';
 
 import css from './App.less';
@@ -57,6 +58,7 @@ const views = [
 	{title: 'Spinner', view: Spinner},
 	{title: 'TooltipDecorator', view: TooltipDecorator},
 	{isAriaHidden: true, title: 'VideoPlayer', view: VideoPlayer},
+	{title: 'VirtualGridList', view: VirtualGridList},
 	{title: 'VirtualList', view: VirtualList}
 ];
 
