@@ -13,21 +13,18 @@ class PopupView extends React.Component {
 			open1: false,
 			open2: false,
 			open3: false,
-			open4: false,
-			open5: false
+			open4: false
 		};
 
 		this.handleOpen1 = this.handleOpen(1);
 		this.handleOpen2 = this.handleOpen(2);
 		this.handleOpen3 = this.handleOpen(3);
 		this.handleOpen4 = this.handleOpen(4);
-		this.handleOpen5 = this.handleOpen(5);
 
 		this.handleClose1 = this.handleClose(1);
 		this.handleClose2 = this.handleClose(2);
 		this.handleClose3 = this.handleClose(3);
 		this.handleClose4 = this.handleClose(4);
-		this.handleClose5 = this.handleClose(5);
 	}
 
 	handleOpen = (expNum) => () => {
@@ -43,7 +40,7 @@ class PopupView extends React.Component {
 	}
 
 	render () {
-		const {open1, open2, open3, open4, open5} = this.state;
+		const {open1, open2, open3, open4} = this.state;
 
 		return (
 			<div>
@@ -51,7 +48,6 @@ class PopupView extends React.Component {
 				<Button onClick={this.handleOpen2}>Long Popup</Button>
 				<Button onClick={this.handleOpen3}>Scroller Popup</Button>
 				<Button onClick={this.handleOpen4}>Button In Popup</Button>
-				<Button onClick={this.handleOpen5}>Customizable aria-label close button in popup</Button>
 
 				<Popup
 					open={open1}
@@ -112,17 +108,6 @@ class PopupView extends React.Component {
 					showCloseButton
 				>
 					<Divider>Buttons In Popup Example</Divider>
-					<Button>Hello</Button>
-					<Button>Goodbye</Button>
-				</Popup>
-
-				<Popup
-					closeButtonAriaLabel="Close popup"
-					onClose={this.handleClose5}
-					open={open5}
-					showCloseButton
-				>
-					<Divider>Customizable aria-label close button in popup Example</Divider>
 					<Button>Hello</Button>
 					<Button>Goodbye</Button>
 				</Popup>

@@ -25,18 +25,11 @@ class ProgressBarView extends React.Component {
 
 	render = () => {
 		const {progressVal} = this.state;
-		let a11yValueText;
-
-		if (progressVal === 0.5) {
-			a11yValueText = '50% progressing';
-		} else if (progressVal === 1) {
-			a11yValueText = 'Completed';
-		}
 
 		return (
 			<div>
 				<Divider>Default</Divider>
-				<ProgressBar aria-live="assertive" aria-label={a11yValueText} progress={progressVal} />
+				<ProgressBar aria-live="assertive" progress={progressVal} />
 				<br />
 				<IconButton aria-label="Increase" onClick={this.onInc}>plus</IconButton>
 				<IconButton aria-label="Decrease" onClick={this.onDec}>minus</IconButton>

@@ -20,14 +20,9 @@ const
 	},
 	// eslint-disable-next-line enact/prop-types, enact/display-name
 	renderItem = (isHorizontalList) => ({index, ...rest}) => {
-		const posinset = index + 1;
-
 		return (
 			<Item
 				{...rest}
-				aria-posinset={posinset}
-				aria-setsize={items.length}
-				role="listitem"
 				style={isHorizontalList ? horizontalStyle : verticalStyle}
 			>
 				{items[index]}
@@ -43,13 +38,8 @@ class VirtualListView extends React.Component {
 	constructor () {
 		super();
 		this.state = {
-			isHorizontalList: false,
-			setAriaLabel: false
+			isHorizontalList: false
 		};
-	}
-
-	onClickChangeAriaLabelButton = () => {
-		this.setState((state) => ({setAriaLabel: !state.setAriaLabel}));
 	}
 
 	onClickChangeDirectionButton = () => {
@@ -57,19 +47,11 @@ class VirtualListView extends React.Component {
 	}
 
 	render () {
-		const
-			isHorizontalList = this.state.isHorizontalList,
-			setAriaLabel = this.state.setAriaLabel;
+		const isHorizontalList = this.state.isHorizontalList;
 
 		return (
 			<Layout orientation="vertical">
 				<Cell shrink>
-					<ToggleButton
-						onClick={this.onClickChangeAriaLabelButton}
-						selected={setAriaLabel}
-						toggleOffLabel="default on ScrollButtons"
-						toggleOnLabel="Customizable aria-labels on ScrollButtons"
-					/>
 					<ToggleButton
 						onClick={this.onClickChangeDirectionButton}
 						selected={isHorizontalList}
@@ -85,8 +67,6 @@ class VirtualListView extends React.Component {
 					focusableScrollbar
 					itemRenderer={renderItem(isHorizontalList)}
 					itemSize={ri.scale(isHorizontalList ? 170 : 72)}
-					scrollDownAriaLabel={setAriaLabel ? 'This is scroll down' : null}
-					scrollUpAriaLabel={setAriaLabel ? 'This is scroll up' : null}
 				/>
 			</Layout>
 		);

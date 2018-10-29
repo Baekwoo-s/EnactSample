@@ -4,7 +4,7 @@ import React from 'react';
 import {readAlert} from '@enact/webos/speech';
 import ToggleButton from '@enact/moonstone/ToggleButton';
 
-class ReadAlertView extends React.Component {
+class LunacallView extends React.Component {
 	constructor () {
 		super();
 		this.state = {
@@ -71,4 +71,4 @@ class ReadAlertView extends React.Component {
 	}
 }
 
-export default ReadAlertView;
+export default LunacallView;

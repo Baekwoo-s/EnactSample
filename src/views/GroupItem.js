@@ -14,19 +14,6 @@ const GroupItemView = () => (
 		>
 			{['Item 1', 'Item 2', 'Item 3']}
 		</Group>
-		<Divider>Customizable aria-labels</Divider>
-		<Group
-			childComponent={Button}
-			select={'radio'}
-			selectedProp="selected"
-			defaultSelected={0}
-		>
-			{[
-				{'aria-label': 'first item', children: 'Item 1', key: 1},
-				{'aria-label': 'second item', children: 'Item 2', key: 2},
-				{'aria-label': 'third item', children: 'Item 3', key: 3}
-			]}
-		</Group>
 	</div>
 );
 

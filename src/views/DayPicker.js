@@ -12,14 +12,6 @@ const DayPickerView = () => (
 				noneText="none"
 				title="Day Picker"
 			/>
-			<Divider>Customizable labels</Divider>
-			<DayPicker
-				everyDayText="Selected every day"
-				everyWeekdayText="Selected every weekday"
-				everyWeekendText="Selected every weekend"
-				noneText="none"
-				title="Day Picker"
-			/>
 		</Cell>
 	</Layout>
 );

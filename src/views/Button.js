@@ -34,10 +34,6 @@ const ButtonView = () => (
 			<StatefulToggleButton>Toggle Button</StatefulToggleButton>
 			<StatefulToggleButton disabled>Disabled Toggle Button</StatefulToggleButton>
 			<StatefulToggleButton toggleOffLabel="Close" toggleOnLabel="Open" />
-			<Divider>Aria-labeled Buttons</Divider>
-			<StatefulButton color="yellow" aria-label="color button">yellow Button</StatefulButton>
-			<StatefulIconButton aria-label="plug icon button">plug</StatefulIconButton>
-			<StatefulToggleButton toggleOffLabel="Off" toggleOnLabel="On" aria-label="Toggle button" />
 		</Cell>
 	</Layout>
 );

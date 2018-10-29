@@ -13,7 +13,7 @@
   "private": true,
   "repository": "https://github.com/enyojs/enact-internal-samples",
   "enact": {
-    "title": "QA A11y",
+    "title": "EnactSample",
     "isomorphic": true,
     "ri": {
       "baseSize": 24

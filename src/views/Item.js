@@ -48,9 +48,6 @@ const ItemView = () => (
 				<SwitchItem>Switch item</SwitchItem>
 				<Divider>Toggle Item</Divider>
 				<ToggleItem iconComponent={CustomIcon}>Toggle item</ToggleItem>
-				<Divider>Aria-labled Items</Divider>
-				<Item aria-label="item">Item</Item>
-				<LabeledItem label="Label" aria-label="labeled item">Labeled item</LabeledItem>
 			</div>
 		</Cell>
 	</Layout>

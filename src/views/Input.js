@@ -33,9 +33,6 @@ const InputView = () => (
 				<ExpandableInput title="Input with defaultValue" defaultValue="Initial value" />
 				<ExpandableInput title="Input with Placeholder" noneText="No input" placeholder="Placeholder" />
 				<ExpandableInput title="Input with Password" type="password" />
-				<Divider>Customizable aria-labels</Divider>
-				<Input iconBefore="plus" aria-label="add input" />
-				<ExpandableInput title="Expandable Input" aria-label="expandable input" />
 			</div>
 		</Cell>
 	</Layout>

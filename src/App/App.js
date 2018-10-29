@@ -18,13 +18,12 @@ import ExpandableList from '../views/ExpandableList';
 import GroupItem from '../views/GroupItem';
 import Input from '../views/Input';
 import ItemView from '../views/Item';
+import Lunacall from '../views/Lunacall';
 import Notification from '../views/Notification';
 import Panels from '../views/Panels';
 import Picker from '../views/Picker';
 import Popup from '../views/Popup';
 import ProgressBar from '../views/ProgressBar';
-import ReadAlert from '../views/ReadAlert';
-import ReadOrder from '../views/ReadOrder';
 import Scroller from '../views/Scroller';
 import Slider from '../views/Slider';
 import Spinner from '../views/Spinner';
@@ -47,13 +46,12 @@ const views = [
 	{title: 'GroupItem', view: GroupItem},
 	{title: 'Input', view: Input},
 	{title: 'Item', view: ItemView},
+	{title: 'Lunacall', view: Lunacall},
 	{title: 'Notification', view: Notification},
 	{isHeader: false, title: 'Panels', view: Panels},
 	{title: 'Picker', view: Picker},
 	{title: 'Popup', view: Popup},
 	{title: 'ProgressBar', view: ProgressBar},
-	{title: 'ReadAlert', view: ReadAlert},
-	{title: 'ReadOrder', view: ReadOrder},
 	{title: 'Scroller', view: Scroller},
 	{title: 'Slider', view: Slider},
 	{title: 'Spinner', view: Spinner},
