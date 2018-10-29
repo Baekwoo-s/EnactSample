@@ -1,14 +1,12 @@
-import Button from '@enact/moonstone/Button';
 import LS2Request from '@enact/webos/LS2Request';
 import React from 'react';
-import {readAlert} from '@enact/webos/speech';
 import ToggleButton from '@enact/moonstone/ToggleButton';
 
 class LunacallView extends React.Component {
 	constructor () {
 		super();
 		this.state = {
-			audioGuidance: false
+			standByLight: false
 		};
 
 		if (window.PalmServiceBridge) {
@@ -17,29 +15,22 @@ class LunacallView extends React.Component {
 				method: 'getSystemSettings',
 				parameters: {
 					category: 'option',
-					keys: ['audioGuidance']
+					keys: ['standByLight']
 				},
 				subscribe: true,
 				onSuccess: (res) => {
 					this.setState({
-						audioGuidance: res.settings.audioGuidance === 'on'
+						standByLight: res.settings.standByLight === 'on'
 					});
 				}
 			});
 		}
-
-		this.onClick1 = this.onClick(true);
-		this.onClick2 = this.onClick(false);
-	}
-
-	onClick = (clear) => () => {
-		readAlert('Enact is a framework designed to be performant, customizable and well structured.', clear);
 	}
 
 	onToggle = () => {
 		if (window.PalmServiceBridge) {
 			this.setState(state => ({
-				audioGuidance: !state.audioGuidance
+				standByLight: !state.standByLight
 			}), () => {
 				new LS2Request().send({
 					service: 'luna://com.webos.settingsservice/',
@@ -47,7 +38,7 @@ class LunacallView extends React.Component {
 					parameters: {
 						category: 'option',
 						settings: {
-							audioGuidance: this.state.audioGuidance ? 'on' : 'off'
+							standByLight: this.state.standByLight ? 'on' : 'off'
 						}
 					}
 				});
@@ -60,12 +51,10 @@ class LunacallView extends React.Component {
 			<div>
 				<ToggleButton
 					onToggle={this.onToggle}
-					toggleOffLabel="Audio guidance off"
-					toggleOnLabel="Audio guidance on"
-					selected={this.state.audioGuidance}
+					toggleOffLabel="StandByLight off"
+					toggleOnLabel="StandByLight on"
+					selected={this.state.standByLight}
 				/>
-				<Button onClick={this.onClick1}>readAlert test(clear true)</Button>
-				<Button onClick={this.onClick2}>readAlert test(clear false)</Button>
 			</div>
 		);
 	}
