@@ -17,6 +17,17 @@ Install
 3. npm install
 4. npm run serve
 
+- Enact Sampler
+1. git clone https://github.com/enactjs/enact
+2. cd enact
+3. git checkout develop
+4. npm install
+5. npm run bootstrap
+6. cd packages
+7. cd sampler
+8. npm install
+9. npm run serve
+
 - webOS OSE Settings app (https://github.com/webosose/com.webos.app.settings)
 1. git clone https://github.com/webosose/com.webos.app.settings.git
 2. cd com.webos.app.settings
