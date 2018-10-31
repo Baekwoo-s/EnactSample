@@ -1,0 +1,28 @@
+Install
+
+- Node, NPM install
+1. curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+2. (nvm 설치 확인) command -v nvm
+3. nvm install v6.5.0
+4. (node 설치 확인) node --version
+5. (npm 설치 확인) npm --version
+6. mkdir ~/npm-global-modules && npm config set prefix '~/npm-global-modules' && echo "export PATH=~/npm-global-modules/bin:\$PATH" >> ~/.profile && source ~/.profile
+
+- Enact cli install
+1. npm install -g @enact/cli
+
+- Enact template app
+1. enact create helloworld
+2. cd helloworld
+3. npm install
+4. npm run serve
+
+- webOS OSE Settings app (https://github.com/webosose/com.webos.app.settings)
+1. git clone https://github.com/webosose/com.webos.app.settings.git
+2. cd com.webos.app.settings
+3. npm install
+4. npm run serve
+
+
+- 정백우
+- baekwoo.jung@lge.com
